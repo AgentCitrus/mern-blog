@@ -10,7 +10,7 @@ export default function Home() {
     const [posts, setPosts] = useState<any[]>([]);
 
     useEffect(() => {
-        axios.get('http://192.168.1.151:5000/posts')
+        axios.get('http://localhost:5000/posts')
             .then(response => setPosts(response.data))
             .catch(error => console.error(error))
     }, []);
